@@ -49,7 +49,6 @@ header {
    background: #fff;    
 }
 header .header-content {
-	background: #fff url(img/header-content-bg.png) no-repeat right top;
 	height: 288px;
 	border-bottom: 1px dashed #E8E8E8;
 	position: relative;	
