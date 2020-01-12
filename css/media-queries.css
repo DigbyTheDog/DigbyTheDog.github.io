@@ -34,7 +34,7 @@
 	/* header styles 
 	-------------------------------------------------------------- */
 	header .header-content {
-		background: #fff url(img/header-content-bg.png) no-repeat right top;	
+		background: #fff;	
 		background-size: 330px 234px;
 	}	
 	header h1#logo-text a {	 		
@@ -59,7 +59,7 @@
 		height: 276px;      
 	}
 	header .header-content {
-		background: #fff url(img/header-content-bg.png) no-repeat 50% top;	
+		background: #fff;	
 		padding: 0;	
 		border: none;
 	}
@@ -354,7 +354,7 @@
 		height: 260px;      
 	}
 	header .header-content {
-		background: #fff url(img/header-content-bg.png) no-repeat 50% top;	
+		background: #fff;	
 		background-size: 300px 213px;
 	}
    header h1#logo-text a {	 		
