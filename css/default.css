@@ -57,6 +57,7 @@ time, mark, audio, video {
    font-size: 100%;
    vertical-align: baseline;
    background: transparent;
+   background-color: white;
 }
 
 article,aside,details,figcaption,figure,
@@ -289,14 +290,14 @@ hr { border: solid #E8E8E8; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #93B876;
+   color: black;
    
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
    -o-transition: color .3s ease-in-out;
    transition: color .3s ease-in-out;
 }
-a:hover, a:focus { color: #34393A; }
+a:hover, a:focus { color: #a66c42; }
 p a, p a:visited { line-height: inherit; }
 
 
@@ -351,7 +352,7 @@ ol ol li, ol ul li { }
    color: #444;
 }
 .stats-tabs li a:hover {
-   color: #93B876;
+   color: black;
 }
 .stats-tabs li a em {
 	display: block;
@@ -363,7 +364,7 @@ ol ol li, ol ul li { }
 
 /* definition list */
 dl { margin: 12px 0; }
-dt { margin: 0; color: #93B876; }
+dt { margin: 0; color: black; }
 dd { margin: 0 0 0 20px; }
 
 /* Lining Definition Style Markup */
@@ -435,7 +436,7 @@ dd { margin: 0 0 0 20px; }
 }
 .pagination .current,
 .pagination .current:hover {
-   background-color: #93B876;
+   background-color: black;
    color: #fff;
 }
 .pagination .inactive,
