@@ -19,11 +19,10 @@ function changePage(page){
     var client = new XMLHttpRequest();
     client.open('GET', 'https://lexleesch.com/entries/01142020.html');
     client.onreadystatechange = function() {
-      alert(client.responseText);
+      main.innerHTML += client.responseText;
     }
     client.send();
 
-    main.innerHTML = "aaaaaaaaaaaaaaaaaa";
 
     /*
     var btn_next = document.getElementById("btn_next");
