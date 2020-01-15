@@ -15,15 +15,12 @@ function nextPage(){
 function changePage(page){
 
     var main = document.getElementById("main");
+    
+    // Validate page
+    if (page < 1) page = 1;
+    if (page > numPages()) page = numPages();
 
-    var client = new XMLHttpRequest();
-    client.open('GET', 'https://lexleesch.com/entries/' + entries[0]);
-    client.onreadystatechange = function() {
-        if (client.readyState == 4 && client.status == 200) {
-            main.innerHTML += client.responseText;
-        }
-    }
-    client.send();
+    appendPostToMainBody(entries[page - 1]);
 
 
     /*
@@ -33,9 +30,7 @@ function changePage(page){
     var main = document.getElementById("main");
     var page_span = document.getElementById("page");
 
-    // Validate page
-    if (page < 1) page = 1;
-    if (page > numPages()) page = numPages();
+
 
     listing_table.innerHTML = "";
 
@@ -59,6 +54,25 @@ function changePage(page){
 
 }
 
+function appendPostToMainBody(fileName){
+
+    var client = new XMLHttpRequest();
+    client.open('GET', 'https://lexleesch.com/entries/' + fileName);
+    client.onreadystatechange = function() {
+        if (client.readyState == 4 && client.status == 200) {
+            main.innerHTML += client.responseText;
+        }
+    }
+    client.send();
+
+}
+
+function numPages(){
+
+    return Math.ceil(entries.length / records_per_page);
+
+}
+
 window.onload = function() {
 
     changePage(1);
@@ -66,5 +80,10 @@ window.onload = function() {
 };
 
 var entries = [
+    "01142020.html",
+    "01142020.html",
+    "01142020.html",
+    "01142020.html",
+    "01142020.html",
     "01142020.html"
 ];
