@@ -32,7 +32,7 @@ body {
 .entry h2,
 .entry h2 a {
 	font: 31px/36px 'opensans-semibold', sans-serif;
-	color: #545454;
+	color: black;
 	margin-bottom: 0;
 	letter-spacing: -.5px;
 }
