@@ -17,6 +17,7 @@ function changePage(page){
     var btn_next = document.getElementById("btn_next");
     var btn_prev = document.getElementById("btn_prev");
     var listing_table = document.getElementById("listingTable");
+    var main = document.getElementById("main");
     var page_span = document.getElementById("page");
 
     // Validate page
@@ -41,5 +42,4 @@ function changePage(page){
     } else {
         btn_next.style.visibility = "visible";
     }
-    
 }
