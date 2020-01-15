@@ -14,6 +14,18 @@ function nextPage(){
 
 function changePage(page){
 
+    var main = document.getElementById("main");
+
+    var client = new XMLHttpRequest();
+    client.open('GET', './entries/01142020.html');
+    client.onreadystatechange = function() {
+      alert(client.responseText);
+    }
+    client.send();
+
+    main.innerHTML = "aaaaaaaaaaaaaaaaaa";
+
+    /*
     var btn_next = document.getElementById("btn_next");
     var btn_prev = document.getElementById("btn_prev");
     var listing_table = document.getElementById("listingTable");
@@ -42,4 +54,12 @@ function changePage(page){
     } else {
         btn_next.style.visibility = "visible";
     }
+    */
+
 }
+
+window.onload = function() {
+
+    changePage(1);
+
+};
