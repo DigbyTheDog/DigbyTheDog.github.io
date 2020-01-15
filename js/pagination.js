@@ -17,7 +17,7 @@ function changePage(page){
     var main = document.getElementById("main");
 
     var client = new XMLHttpRequest();
-    client.open('GET', './entries/01142020.html');
+    client.open('GET', 'https://lexleesch.com/entries/01142020.html');
     client.onreadystatechange = function() {
       alert(client.responseText);
     }
