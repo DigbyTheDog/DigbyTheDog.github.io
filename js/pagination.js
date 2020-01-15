@@ -1,4 +1,4 @@
-// Pagination stuff. Stolen from https://stackoverflow.com/questions/25434813/simple-pagination-in-javascript
+// Pagination stuff. Partially stolen from https://stackoverflow.com/questions/25434813/simple-pagination-in-javascript
 
 var current_page = 1;
 var records_per_page = 5;
@@ -17,9 +17,11 @@ function changePage(page){
     var main = document.getElementById("main");
 
     var client = new XMLHttpRequest();
-    client.open('GET', 'https://lexleesch.com/entries/01142020.html');
+    client.open('GET', 'https://lexleesch.com/entries/' + entries[0]);
     client.onreadystatechange = function() {
-      main.innerHTML += client.responseText;
+        if (client.readyState == 4 && client.status == 200) {
+            main.innerHTML += client.responseText;
+        }
     }
     client.send();
 
@@ -62,3 +64,7 @@ window.onload = function() {
     changePage(1);
 
 };
+
+var entries = [
+    "01142020.html"
+];
