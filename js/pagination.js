@@ -20,7 +20,10 @@ function changePage(page){
     if (page < 1) page = 1;
     if (page > numPages()) page = numPages();
 
-    appendPostToMainBody(entries[page - 1]);
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        appendPostToMainBody(entries[i]);
+    }
+    
 
 
     /*
