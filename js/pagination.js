@@ -2,6 +2,7 @@
 
 var current_page = 1;
 var records_per_page = 5;
+var body = "";
 
 function nextPage() {
 
@@ -33,7 +34,7 @@ function pageButton(btn_index){
 function changePage(page) {
 
     var main = document.getElementById("main");
-    main.innerHTML = "";
+    body = "";
     
     // Validate page
     if (current_page < 1) 
@@ -52,17 +53,18 @@ function changePage(page) {
     }
     
     activatePageButtons();
-    //console.log(current_page);
+    main.innerHTML = body;
+    console.log(current_page);
 
 }
 
 function appendPostToMainBody(fileName) {
 
     var client = new XMLHttpRequest();
-    client.open('GET', 'https://lexleesch.com/entries/' + fileName);
+    client.open('GET', 'https://lexleesch.com/entries/' + fileName, false);
     client.onreadystatechange = function() {
         if (client.readyState == 4 && client.status == 200) {
-            main.innerHTML += client.responseText;
+            body += client.responseText;
         }
     }
     client.send();
