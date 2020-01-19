@@ -1,5 +1,6 @@
 // Pagination stuff. Partially stolen from https://stackoverflow.com/questions/25434813/simple-pagination-in-javascript
 
+var devMode = false;
 var current_page = 1;
 var records_per_page = 5;
 var body = "";
@@ -183,11 +184,13 @@ function search() {
 
 window.onload = function() {
 
-    changePage(1);
+    if(!devMode)
+        changePage(1);
 
 };
 
 var entries = [
+    "ThisWebsite.html",
     "PicoBomber.html",
     "PicoBomber.html",
     "PicoBomber.html",
