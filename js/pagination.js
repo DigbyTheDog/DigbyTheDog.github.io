@@ -46,10 +46,10 @@ function changePage(page) {
     for (var i = (current_page-1) * records_per_page; i < (current_page * records_per_page); i++) {
         
         // If we are out of entries to load, then stop.
-        if (i == entries.length)
+        if (i == entries.length || i < 0)
             break;
 
-        appendPostToMainBody(entries[i]);
+        body += getEntryText(entries[i]);
     }
     
     activatePageButtons();
@@ -58,16 +58,18 @@ function changePage(page) {
 
 }
 
-function appendPostToMainBody(fileName) {
+function getEntryText(fileName) {
 
+    var postText;
     var client = new XMLHttpRequest();
     client.open('GET', 'https://lexleesch.com/entries/' + fileName, false);
     client.onreadystatechange = function() {
         if (client.readyState == 4 && client.status == 200) {
-            body += client.responseText;
+            postText = client.responseText;
         }
     }
     client.send();
+    return postText;
 
 }
 
@@ -140,7 +142,7 @@ function activatePageButtons() {
 
 }
 
-function shiftPageButtons(shiftNumber){
+function shiftPageButtons(shiftNumber) {
 
     for (var i = 1; i <= 9; i++) {
 
@@ -149,6 +151,33 @@ function shiftPageButtons(shiftNumber){
         btn_pagenum.textContent = btn_number + shiftNumber;
 
     }
+
+}
+
+function search() {
+
+    var searchtext = document.getElementById("searchtext").value;
+
+    if(searchtext == '' || searchtext == 'Search here...')
+        return;
+
+    var newEntries = [];
+    for (var i = 0; i < entries.length; i++){
+
+        var entryText = getEntryText(entries[i]);
+        var searchResults = entryText.toLowerCase().search(searchtext.toLowerCase());
+        if(searchResults > 0){
+            newEntries.push(entries[i]);
+        }
+
+    }
+
+    if(newEntries.length == 0){
+        newEntries.push("NoResults.html");
+    }
+
+    entries = newEntries;
+    changePage(1);
 
 }
 
