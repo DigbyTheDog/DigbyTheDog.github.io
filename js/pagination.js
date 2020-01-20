@@ -157,10 +157,13 @@ function shiftPageButtons(shiftNumber) {
 
 function search() {
 
+    entries = allEntries;
     var searchtext = document.getElementById("searchtext").value;
 
-    if(searchtext == '' || searchtext == 'Search here...')
+    if(searchtext == '' || searchtext == 'Search here...'){
+        changePage(1);
         return;
+    }
 
     var newEntries = [];
     for (var i = 0; i < entries.length; i++){
@@ -244,3 +247,4 @@ var entries = [
     "PicoBomber.html",
     "PicoBomber.html"
 ];
+var allEntries = entries;
