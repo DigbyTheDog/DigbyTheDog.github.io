@@ -185,6 +185,34 @@ function search() {
 
 }
 
+function loadCategory(category) {
+
+    entries = allEntries;
+
+    if(category == '' || category == 'Everything'){
+        changePage(1);
+        return;
+    }
+
+    var newEntries = [];
+    for (var i = 0; i < entries.length; i++){
+
+        var entryText = getEntryText(entries[i]);
+        var entryTag = entryText.match("rel=\"category tag\">(.*)</a>")[1];
+        if(entryTag === category)
+            newEntries.push(entries[i]);
+
+    }
+
+    if(newEntries.length == 0){
+        newEntries.push("NoResults.html");
+    }
+
+    entries = newEntries;
+    changePage(1);
+
+}
+
 window.onload = function() {
 
     if(!devMode)
