@@ -8,8 +8,7 @@ var body = "";
 function nextPage() {
 
   if (current_page < numPages()) {
-    current_page++;
-    changePage(current_page);
+    changePage(current_page + 1);
   }
 
 }
@@ -17,8 +16,7 @@ function nextPage() {
 function prevPage() {
 
   if (current_page > 1) {
-    current_page--;
-    changePage(current_page);
+    changePage(current_page - 1);
   }
 
 }
@@ -27,16 +25,16 @@ function pageButton(btn_index){
 
     var btn_pagenum = document.getElementById("page" + btn_index);
     var btn_number = Number(btn_pagenum.textContent);
-    current_page = btn_number;
-    changePage(current_page);
+    changePage(btn_number);
 
 }
 
 function changePage(page) {
 
+    current_page = page;
     var main = document.getElementById("main");
     body = "";
-    
+
     // Validate page
     if (current_page < 1) 
         current_page = 1;
@@ -99,27 +97,40 @@ function activatePageButtons() {
         btn_next.classList.remove("inactive");
     }
 
+    var matchFound = false;
+    var btn_pagenum;
+    var btn_number;
     for (var i = 1; i <= 9; i++) {
 
-        var btn_pagenum = document.getElementById("page" + i);
-        var btn_number = Number(btn_pagenum.textContent);
+        btn_pagenum = document.getElementById("page" + i);
+        btn_number = Number(btn_pagenum.textContent);
 
-        if (btn_number == current_page && i > 5) {
 
-            var current_page_temp = current_page;
-            var num_to_shift = i - 5;
-            while(current_page_temp + 4 > numPages()){
-                current_page_temp--;
-                num_to_shift--;
+        if(btn_number == current_page){
+            matchFound = true;
+            if (i > 5) {
+                var current_page_temp = current_page;
+                var num_to_shift = i - 5;
+                while(current_page_temp + 4 > numPages()){
+                    current_page_temp--;
+                    num_to_shift--;
+                }
+                console.log(current_page_temp + " " + num_to_shift);
+                shiftPageButtons(num_to_shift);        
+            }
+            else if (i < 5){
+                shiftPageButtons(- (btn_number - i));
             }
 
-            shiftPageButtons(num_to_shift);
-        
         }
 
-        if (btn_number == current_page && i < 5)
-            shiftPageButtons(- (btn_number - i));
 
+    }
+
+    if (!matchFound){
+        btn_pagenum = document.getElementById("page1");
+        btn_number = Number(btn_pagenum.textContent);
+        shiftPageButtons(- (btn_number - 1));
     }
 
     // The 9 buttons between
@@ -222,57 +233,6 @@ window.onload = function() {
 
 var entries = [
     "ThisWebsite.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
-    "PicoBomber.html",
     "PicoBomber.html"
 ];
 var allEntries = entries;
