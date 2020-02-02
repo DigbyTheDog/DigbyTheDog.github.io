@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "HowToCode.html",
     "ThisWebsite.html",
     "PicoBomber.html"
 ];
