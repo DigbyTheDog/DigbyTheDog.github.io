@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "PunchOutAudience.html",
     "HowToCode.html",
     "ThisWebsite.html",
     "PicoBomber.html"
