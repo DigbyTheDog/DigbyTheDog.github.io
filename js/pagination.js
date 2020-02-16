@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "Teletubbies.html",
     "PunchOutAudience.html",
     "HowToCode.html",
     "ThisWebsite.html",
