@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "TurtleRider.html",
     "GummyBears.html",
     "Teletubbies.html",
     "PunchOutAudience.html",
