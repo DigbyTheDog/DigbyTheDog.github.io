@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "Viruses.html",
     "Chair.html",
     "TurtleRider.html",
     "GummyBears.html",
