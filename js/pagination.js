@@ -232,6 +232,8 @@ window.onload = function() {
 };
 
 var entries = [
+    "Korok.html",
+    "Burger.html",
     "Viruses.html",
     "Chair.html",
     "TurtleRider.html",
