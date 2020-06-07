@@ -232,6 +232,8 @@ window.onload = function() {
 };
 
 var entries = [
+    "Warios.html",
+    "Well.html",
     "Korok.html",
     "Burger.html",
     "Viruses.html",
