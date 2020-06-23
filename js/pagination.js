@@ -232,6 +232,8 @@ window.onload = function() {
 };
 
 var entries = [
+    "PaintDoodle2.html",
+    "PaintDoodle1.html",
     "Warios.html",
     "Well.html",
     "Korok.html",
