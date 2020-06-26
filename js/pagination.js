@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+    "Keurig.html",
     "PaintDoodle2.html",
     "PaintDoodle1.html",
     "Warios.html",
