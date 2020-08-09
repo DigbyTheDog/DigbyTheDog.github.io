@@ -232,6 +232,8 @@ window.onload = function() {
 };
 
 var entries = [
+	"XboxController.html",
+	"July31Update.html",
 	"Rubik.html",
 	"NewTool.html",
     "Keurig.html",
