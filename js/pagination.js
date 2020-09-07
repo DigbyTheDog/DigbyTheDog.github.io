@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"soupman.html",
 	"XboxController.html",
 	"Rubik.html",
 	"NewTool.html",
