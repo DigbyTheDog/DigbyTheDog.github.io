@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"3D Desk.html",
 	"soupman.html",
 	"XboxController.html",
 	"Rubik.html",
