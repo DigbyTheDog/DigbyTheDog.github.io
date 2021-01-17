@@ -232,6 +232,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"DigbyMascot.html",
 	"pythonwumpus.html",
 	"croc.html",
 	"3D Desk.html",
