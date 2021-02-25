@@ -232,7 +232,8 @@ window.onload = function() {
 };
 
 var entries = [
-	"furby.html",
+	"Atari2600.html",
+    "furby.html",
 	"DigbyMascot.html",
 	"pythonwumpus.html",
 	"croc.html",
