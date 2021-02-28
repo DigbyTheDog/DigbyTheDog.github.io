@@ -53,7 +53,6 @@ function changePage(page) {
     
     activatePageButtons();
     main.innerHTML = body;
-    console.log(current_page);
 
 }
 
@@ -105,17 +104,15 @@ function activatePageButtons() {
         btn_pagenum = document.getElementById("page" + i);
         btn_number = Number(btn_pagenum.textContent);
 
-
         if(btn_number == current_page){
             matchFound = true;
-            if (i > 5) {
+            if (i > 5  && numPages() > 9) {
                 var current_page_temp = current_page;
                 var num_to_shift = i - 5;
                 while(current_page_temp + 4 > numPages()){
                     current_page_temp--;
                     num_to_shift--;
                 }
-                console.log(current_page_temp + " " + num_to_shift);
                 shiftPageButtons(num_to_shift);        
             }
             else if (i < 5){
