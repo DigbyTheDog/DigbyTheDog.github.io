@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"sleepydog.html",
 	"Atari2600.html",
     "furby.html",
 	"DigbyMascot.html",
