@@ -1,6 +1,6 @@
 // Pagination stuff. Partially stolen from https://stackoverflow.com/questions/25434813/simple-pagination-in-javascript
 
-var devMode = false;
+var devMode = true;
 var current_page = 1;
 var records_per_page = 5;
 var body = "";
@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"yellowstone.html",
 	"spanishpractice.html",
 	"sleepydog.html",
 	"Atari2600.html",
