@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"spanishprogress.html",
 	"wonders.html",
 	"spanishpractice.html",
 	"sleepydog.html",
