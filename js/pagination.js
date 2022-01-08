@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"godotprogress1.html",
 	"spanishprogress.html",
 	"wonders.html",
 	"spanishpractice.html",
