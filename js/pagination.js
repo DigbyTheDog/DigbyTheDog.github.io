@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"prk.html",
 	"godotprogress1.html",
 	"spanishprogress.html",
 	"wonders.html",
