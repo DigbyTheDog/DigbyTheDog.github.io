@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"gamejamfinished.html",
 	"GameJam.html",
 	"prk.html",
 	"godotprogress1.html",
