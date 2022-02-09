@@ -229,6 +229,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"coffeedoodle.html",
 	"gamejamfinished.html",
 	"GameJam.html",
 	"prk.html",
