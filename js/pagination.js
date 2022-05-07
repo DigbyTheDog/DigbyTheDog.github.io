@@ -221,10 +221,26 @@ function loadCategory(category) {
 
 }
 
+function checkForSearchInURL() {
+
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    // Get the value of "search" in eg ".com/?search=some_value"
+    let value = params.search;
+    if(value) {
+        document.getElementById("searchtext").value = value;
+        search();
+    }
+
+}
+
 window.onload = function() {
 
     if(!devMode)
         changePage(1);
+
+    checkForSearchInURL();
 
 };
 
