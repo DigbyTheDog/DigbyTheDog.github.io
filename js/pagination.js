@@ -245,6 +245,7 @@ window.onload = function() {
 };
 
 var entries = [
+	"hungrymailbox.html",
 	"penguinicefishing.html",
 	"3dgametutorial.html",
 	"coffeedoodle.html",
