@@ -245,7 +245,8 @@ window.onload = function() {
 };
 
 var entries = [
-	"move.html",
+	"familyforest.html",
+    "move.html",
     "chumgarden.html",
 	"hungrymailbox.html",
 	"penguinicefishing.html",
