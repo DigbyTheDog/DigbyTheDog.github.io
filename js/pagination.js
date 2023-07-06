@@ -245,7 +245,8 @@ window.onload = function() {
 };
 
 var entries = [
-	"cat.html",
+	"Wizard.html",
+    "cat.html",
     "familyforest.html",
     "move.html",
     "chumgarden.html",
